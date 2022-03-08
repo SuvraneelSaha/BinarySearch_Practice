@@ -19,6 +19,14 @@ public class Ceiling_Final {
     }
 
     static int ceiling(int[] arr, int target) {
+        // what if the target element is greater than the greatest element in the array
+
+        if(target>arr[arr.length-1])
+        {
+            return -1;
+        }
+        // edge case
+
         int start = 0;
         int end = arr.length - 1; // cause we are taking in the index position
         while (start <= end) { // ascending order
@@ -59,3 +67,7 @@ public class Ceiling_Final {
 // 4] THE START POINTER WILL COME AHEAD OF END WHEN THE WHILE LOOP BREAKS
 // 5] SO IT MAKES SENSE TO RETURN THE START ELEMENT OR INDEX
 // 6] THE ANS OR THE TARGET ELEMENT DOES NOT LIE BETWEEN THE START AND END IE THE ANS THE SOLN
+// VISUAL REPRESENTATION --
+// END TARGET START // CAUSE THE WHILE LOOP BREAKS
+// AND WE ARE FINDING THE NEXT BIG ELEMENT FROM THE TARGET ELEMENT
+// AND IF THE TARGET ELEMENT IS FOUND THEN SIMPLE BINARY SEARCH
