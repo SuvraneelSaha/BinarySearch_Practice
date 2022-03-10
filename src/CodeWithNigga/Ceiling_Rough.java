@@ -41,6 +41,6 @@ public class Ceiling_Rough {
             }
 
         }
-        return -1;
+        return -1; // this returns -1 when the element does not belong in the array ; user given array
     }
 }
