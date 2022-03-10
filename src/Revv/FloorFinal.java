@@ -32,6 +32,9 @@ public class FloorFinal {
 //        if (target > arr[arr.length - 1]) {
 //            return -1;
 //        }
+        // if the target element is lesser than the the lowest element of the array
+        // then it will return -1
+        // so no need to specify it again
         // not needed as by default the end pointer will become -1
         // so its better to not include the test case in it
         int start = 0;

@@ -9,7 +9,8 @@ public class SmallestLetter {
 
 
     }
-    public char nextGreatestLetter(char[] arr, char target) {
+    public char nextGreatestLetter(char[] arr, char target)
+    {
 //        if(target>arr[arr.length-1])
 //        {
 //            return -1;
@@ -26,7 +27,8 @@ public class SmallestLetter {
             {
                 start = mid + 1;
             }
-            else // we are removind the target < arr[mid] condition as it is not required
+            else // we are removing the target < arr[mid] condition as it is not required
+            // atp as it has been clearly stated that only the greater than element is required not the equal to element
             {
                 end = mid - 1;
             }
@@ -37,7 +39,7 @@ public class SmallestLetter {
         return arr[start % arr.length] ;
         // if it is not simplified then we need to use another return start
         // we are doing this because to simplify the wrap around case
-        // if(s%n) ----
+        // if(start%n) ----
         //  return arr[0]
         //  the condition has been simplified to start % arr.lenght
         // we need to return the letter not the index
