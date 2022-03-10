@@ -45,15 +45,24 @@ public class SmallestLetterGreater {
             {
                 end = middle -1 ;
             }
+            
 
             // until and unless the start > end the while loop wil run
             // the while loop will end when the start pointer becomes > end
             // ie start becomes end + 1 ; then the loop stops or breaks
         }
-        return arr[start % arr.length]; // cause this is for the wrap around case
+       // return arr[start % arr.length]; // cause this is for the wrap around case
         // ex - {a,d,g,h} ;
         // if the target element is h then the ans would be a -- wrap around so
         // start % arr.length
+        if(start==arr.length)
+        {
+            return arr[0];
+        }
+        else
+            return arr[start];
+
+
     }
 
 }
