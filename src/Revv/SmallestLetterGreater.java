@@ -37,15 +37,15 @@ public class SmallestLetterGreater {
         {
             int middle = start + (end-start)/2;
             // cause range may exceed problem
-            if(target>arr[middle])
-            {
-                start = middle + 1 ;
-            }
-            else
+            if(target<arr[middle])
             {
                 end = middle -1 ;
             }
-            
+            else
+            {
+                start = middle + 1 ;
+            }
+
 
             // until and unless the start > end the while loop wil run
             // the while loop will end when the start pointer becomes > end
