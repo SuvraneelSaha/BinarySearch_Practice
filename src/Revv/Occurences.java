@@ -1,5 +1,6 @@
 package Revv;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Occurences {
@@ -16,17 +17,18 @@ public class Occurences {
         }
         System.out.println("please enter the target element :");
         int target = in.nextInt();
+        System.out.println(Arrays.toString(searchRange(arr,target)));
 
 
     }
-    public int[] searchRange(int[] nums, int target) {
+    static int[] searchRange(int[] nums, int target) {
         int[] ans = new int[2];
         ans[0] = firstPos(nums, target);
         ans[1] = lastPos(nums, target);
         return ans;
     }
 
-    public int firstPos(int[] nums, int target) {
+    static int firstPos(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;
         int res = -1;
@@ -45,7 +47,7 @@ public class Occurences {
         return res;
     }
 
-    public int lastPos(int[] nums, int target) {
+    static int lastPos(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;
         int res = -1;
