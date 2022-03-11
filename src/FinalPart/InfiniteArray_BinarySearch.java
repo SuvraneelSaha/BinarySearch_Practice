@@ -14,8 +14,27 @@ public class InfiniteArray_BinarySearch {
         int start = 0 ;
         int end = 1 ;
 
+
+
+
+        // here the end pointer is considered
+        // as if the target element > the end pointer obviously the target element will be greater than the start pointer
+        // so no need to compare it with the start pointer
         // condition for the target to lie in the range
-        
+        while (target>arr[end])
+        {
+            int temp = end + 1  ; // this is our new start
+            // double the box value after each iteration
+            // so
+            // the formula for that is
+            //  end = previous end + 2 x size of the box
+            end = end + (end - start + 1) * 2 ; // we are using start here before updating
+            // cause we need to use it to take in the value of the end before updating
+            start = temp;
+
+        }
+        return search(arr,target,start,end);
+
     }
     static int search(int[] arr , int target,int start,int end )
     {
@@ -49,4 +68,4 @@ public class InfiniteArray_BinarySearch {
 // from bottoms to the UP
 // LEARN THE PATTERN LEARN THE MAIN APPROACH
 // SOLVE ALL THE QUESTIONS THROUGH THE PATTERN ONLY
-//
+//Spoon feeding teaches nothing but the shape of the spoon
