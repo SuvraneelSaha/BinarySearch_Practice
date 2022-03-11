@@ -1,4 +1,5 @@
 package Revv;
+ // Full problematic setup
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -64,39 +65,5 @@ public class First_Last_New {
         }
         return ans;
     }
-    static int normalbinarysearchlast(int[] arr,int target,boolean last)
-    {
-        int ans = -1 ;// by default if the ans is not found
-        int start = 0 ;
-        int end = arr.length-1;
-        while(start<=end)
-        {
-            int middle = start + (end - start)/2;
-            if(target>arr[middle])
-            {
-                start = middle + 1 ;
-            }
-            else if(target<arr[middle])
-            {
-                end = middle -1 ;
-            }
-            else
-            {
-                // potential ans found ie the index position
-                ans = middle ;
-                if(last) {
-                    // for finding the index of the 1st occurence
-                    // which will lie on the left hand side
-                    start = middle + 1;
 
-                }
-                else
-                {
-                    end = middle - 1;
-                }
-            }
-
-        }
-        return ans;
-    }
 }
