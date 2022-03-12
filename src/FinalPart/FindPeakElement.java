@@ -5,7 +5,7 @@ public class FindPeakElement {
 // if you stay consistent ; you will be ready
         // do progressive overload
         // have faith in yourself you will see the your own shine
-        
+        // if you complete the assignments and solve more and more
     }
     static int PeakElement(int[] arr) {
         int start = 0 ;
