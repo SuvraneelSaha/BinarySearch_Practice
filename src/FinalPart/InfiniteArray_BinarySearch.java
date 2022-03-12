@@ -14,11 +14,15 @@ public class InfiniteArray_BinarySearch {
 
     }
     static int ans(int[] arr,int target)
+            // this function solely focuses on finding the start and end pointer and the range in which the target element lies
+            //
     {
         // first find the range of the array
         //  first start with a box of size 2
         int start = 0 ;
         int end = 1 ;
+        // size 2 cause 2 elements are present one at start and another one at the end
+        // common sense
 
 
 
@@ -28,7 +32,19 @@ public class InfiniteArray_BinarySearch {
         // so no need to compare it with the start pointer
         // condition for the target to lie in the range
         while (target>arr[end])
+            // when this while loop will break
+            // then the target element will lie in the range between start and the end pointer
+
+        // we are focussing on the range in which the target element lies
         {
+            // [4,13,15,16,123,200]
+            //  the first start pointer will be at 0
+            //  the first end pointer will be at 1
+            // then the start pointer will be at end + 1 ie at 2
+            // and the end pointer will be at 5
+            // then again the start pointer will be at start = end + 1 = 6
+            // and the end pointer will be at 5 + 4 *2 = 13
+            // doubling each item the range of the array
             int temp = end + 1  ; // this is our new start
             // double the box value after each iteration
             // so
