@@ -4,6 +4,12 @@ package FinalPart;
 public class InfiniteArray_BinarySearch {
     public static void main(String[] args) {
         // While my target element is > end keep doubling
+        int[] arr = {3, 5, 7, 9, 10, 90, 100, 130,
+                140, 160, 170};
+        int target = 10 ;
+        System.out.println(ans(arr,target));
+        // we are not using the arr.length function so it is acting like an infinite array
+        
 
 
     }
