@@ -2,7 +2,10 @@ package FinalPart;
 // Qeustion link : https://leetcode.com/problems/find-peak-element/
 public class FindPeakElement {
     public static void main(String[] args) {
-
+// if you stay consistent ; you will be ready
+        // do progressive overload
+        // have faith in yourself you will see the your own shine
+        
     }
     static int PeakElement(int[] arr) {
         int start = 0 ;
