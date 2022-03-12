@@ -2,7 +2,9 @@ package FinalPart;
 // Qeustion link : https://leetcode.com/problems/find-peak-element/
 public class FindPeakElement {
     public static void main(String[] args) {
-
+// In the coming two months if you stay consistent and do progressive overload every single day
+        // you will be ready
+        
     }
     static int PeakElement(int[] arr) {
         int start = 0 ;
