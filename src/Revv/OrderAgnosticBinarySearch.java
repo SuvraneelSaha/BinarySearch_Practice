@@ -2,11 +2,12 @@ package Revv;
 // Order Agnostic Binary Search
 // Agnostic - meaning doubt or confusion
 // both the ascending and the descending order is combined here
+// two functions have been defined whereas to simplify we could easily
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BinarySearch_Combined {
+public class OrderAgnosticBinarySearch {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("please enter the size of the array :");
