@@ -1,9 +1,17 @@
 package FinalPart;
+//Question link : https://leetcode.com/problems/search-in-rotated-sorted-array/
 
+// Search in a rotated sorted array
+// 2 parts divide -- > 1] finding pivot
+// 2] finding the target element inside the array using pivot
 public class RBS {
     public static void main(String[] args) {
 
     }
+
+
+
+
     static int search(int[] nums, int target) {
     int pivot =  Find_Pivot(nums);
 
@@ -16,12 +24,22 @@ public class RBS {
             // if we found out that there is no pivot
             // it means the array is not rotated
             return  binarysearch(nums,target,0,nums.length-1);
-
-
         }
 
+
         // now if pivot is found then we now have two ascending order arrays one on the left side of the pivot
-        // and the 2nd one is on the right side of the pivot 
+        // and the 2nd one is on the right side of the pivot
+
+
+
+        if(target >= nums[0]) // the target element > the start element
+        {
+            return binarysearch(nums,target,0,pivot-1);
+        }
+        else
+        {
+            return binarysearch(nums,target,pivot+1,nums.length-1);
+        }
 
 
 
