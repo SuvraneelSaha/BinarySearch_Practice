@@ -1,6 +1,6 @@
 package FinalPart;
 
-public class Find_Pivot {
+public class Find_Pivot_Theory {
     public static void main(String[] args) {
         // [3,4,5,6,7,0,1,2]
         // 3 , 4 5 ,6 , 7 is in ascending order

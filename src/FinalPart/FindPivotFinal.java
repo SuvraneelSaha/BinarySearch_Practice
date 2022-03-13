@@ -1,9 +1,12 @@
 package FinalPart;
 // Question link : https://leetcode.com/problems/search-in-rotated-sorted-array/
-public class Rotated_Binary_Search {
+public class FindPivotFinal {
     public static void main(String[] args) {
         // Crucial steps :
         // 1 ] find the pivot in the array
+        int[] arr = {4,5,6,7,0,1,2};
+        System.out.println(Find_Pivot(arr));
+
 
     }
     static int Find_Pivot(int[] arr)
@@ -37,7 +40,7 @@ public class Rotated_Binary_Search {
 
 
         }
-        return -1; 
+        return -1;
     }
 
 }
