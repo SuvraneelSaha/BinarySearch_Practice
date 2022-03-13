@@ -1,5 +1,8 @@
 package FinalPart;
 // Question link : https://leetcode.com/problems/find-in-mountain-array/
+// Interactive problem
+// ill be dealt later
+
 public class MountainArray {
     public static void main(String[] args) {
 // SEARCH IN MOUNTAIN ARRAY :
