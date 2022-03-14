@@ -9,9 +9,6 @@ public class RBS {
 
     }
 
-
-
-
     static int search(int[] nums, int target) {
     int pivot =  Find_Pivot(nums);
 
@@ -29,7 +26,10 @@ public class RBS {
 
         // now if pivot is found then we now have two ascending order arrays one on the left side of the pivot
         // and the 2nd one is on the right side of the pivot
-
+        if(nums[pivot] == target)
+        {
+            return pivot;
+        }
 
 
         if(target >= nums[0]) // the target element > the start element
@@ -57,12 +57,21 @@ public class RBS {
             // 4 cases now
             // CASE 1
             if(mid < end && arr[mid] > arr[mid+1]) // && operator both true then true if both false then false
+                // We NEED TO MAKE SURE THAT THE MID + 1 DOES NOT GOES OUTSIDE THE RANGE
+                // AND GIVE OUT OF BOUNDS ERROR
+                // EDGE CASE - IMAGINE THE MID IS THE LAST ELEMENT OF THE ARRAY
+                // THEN MID + 1 WILL GIVE ERRORS -- INDEX OUT OF BOUNDS
+                // SO SHOULD BE ALWAYS  MID < END POINTER
             // or else it will not run
             {
                 return mid;
             }
             // CASE 2
             if(mid > start && arr[mid]< arr[mid-1])
+            // IF THE MIDDLE IS THE START ELEMENT
+                // THEN MID - 1 WILL GIVE ERROR SO
+                // AND WILL GIVE ARRAY OUT OF BOUNDS
+                // OS MID > START
             {
                 return mid - 1 ;
             }
@@ -101,3 +110,5 @@ public class RBS {
     }
 
 }
+//Cases are nothing just brain storming
+
