@@ -1,5 +1,6 @@
 package FinalPart;
-
+// the function findpivot with duplicate elements will be useful in case of searching of an element
+// or target in a sorted rotated array
 public class RBS_Duplicate_Elements {
     public static void main(String[] args) {
         // in case of the presence of the duplicate elements in the array
@@ -30,10 +31,12 @@ public class RBS_Duplicate_Elements {
         while(start<=end)
         {
             int mid = start + (end - start)/2;
+            // 1st case
             if(arr[mid] > arr[mid+1])
             {
                 return mid ;
             }
+            // 2nd case
             if(arr[mid]<arr[mid-1])
             {
                 return mid -1 ;
@@ -47,13 +50,13 @@ public class RBS_Duplicate_Elements {
                 //  check if start is pivot
                 // start will be pivot if the next element will be smaller than the start
                 //
-                if(arr[start] > arr[start+1])
+                if(arr[start] > arr[start+1])// condition for checking if start is the pivot
                 {
                     return  start;
                 }
                 start ++; // cause we need to update the start pointer // we are doing this cause this are duplicates and we are just skipping it
                 // now lets check if the end pointer is the pivot or not
-                if(arr[end]<arr[end-1])
+                if(arr[end]<arr[end-1]) // condition for checking if the end is the pivot
                 {
                     return end -1 ;
 
@@ -64,13 +67,20 @@ public class RBS_Duplicate_Elements {
             // left side is sorted , so pivot should be in the right side
             // the 3 positions will be entertained start , mid , end
 
+
+
+            //
             else if(arr[start]<arr[mid] || arr[start] == arr[mid] && arr[mid] > arr[end])
-            {
-                start = mid + 1 ;
+            { // just think of mid as the target element
+                // and what we do in case of a normal binary search we are doing just that
+
+                start = mid + 1 ; // for shifting or skipping to the right side
+                // as duplicates elements are present or we can say that  by analagy we are using  the binary search
             }
             else
             {
-                end = mid -1 ;
+                end = mid -1 ; // for shifting to the left side
+                // end = mid -1 
             }
 
         }
