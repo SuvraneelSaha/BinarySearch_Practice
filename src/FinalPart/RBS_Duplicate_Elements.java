@@ -21,7 +21,7 @@ public class RBS_Duplicate_Elements {
         //  as both these two elements are same
         // we are ignoring the duplicate elements as it is a an rotated array
         // pivot - is THE LARGEST ELEMENT IN THE ARRAY
-        //
+        // int[] arr = {4,5,6,7,0,1,2};
 
     }
     static  int Find_Pivot_DuplicateElements(int[] arr )
@@ -32,6 +32,7 @@ public class RBS_Duplicate_Elements {
         {
             int mid = start + (end - start)/2;
             // 1st case
+            //int[] arr = {4,5,6,7,0,1,2};
             if(arr[mid] > arr[mid+1])
             {
                 return mid ;
@@ -42,6 +43,7 @@ public class RBS_Duplicate_Elements {
                 return mid -1 ;
             }
             // if elements at the middle , start , end are same then just skip the duplicates
+            // int[] arr = {4,5,6,7,0,1,2};
             if(arr[mid] == arr[start] && arr[mid] == arr[end] )
             {
                 // just skip the duplicates
@@ -54,6 +56,7 @@ public class RBS_Duplicate_Elements {
                 {
                     return  start;
                 }
+                // int[] arr = {4,5,6,7,0,1,2};
                 start ++; // cause we need to update the start pointer // we are doing this cause this are duplicates and we are just skipping it
                 // now lets check if the end pointer is the pivot or not
                 if(arr[end]<arr[end-1]) // condition for checking if the end is the pivot
@@ -80,7 +83,7 @@ public class RBS_Duplicate_Elements {
             else
             {
                 end = mid -1 ; // for shifting to the left side
-                // end = mid -1 
+                // end = mid -1
             }
 
         }
