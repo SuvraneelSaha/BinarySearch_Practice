@@ -17,11 +17,11 @@ public class Floor {
         }
         System.out.println("please enter the target element to be followed :");
         int target = in.nextInt();
-        System.out.printf("the ceiling element close to the target element %d is %d ", target, ceiling(arr, target));
+        System.out.printf("the floor element close to the target element %d is %d ", target, floor(arr, target));
 
     }
 
-    static int ceiling(int[] arr, int target) {
+    static int floor(int[] arr, int target) {
         // what if the target element is < than the lowest element in the array
 //        if(target<arr[0])
 //        {
